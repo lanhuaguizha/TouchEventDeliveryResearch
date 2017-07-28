@@ -53,7 +53,7 @@ public class ViewGroupParent extends FrameLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.i(TAG, "onInterceptTouchEvent: >>>>>>>>>>>>");
-        return true;
+        return false;
     }
 
     @Override
