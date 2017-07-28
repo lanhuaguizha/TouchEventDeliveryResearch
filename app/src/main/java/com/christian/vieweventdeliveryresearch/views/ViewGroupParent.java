@@ -47,7 +47,7 @@ public class ViewGroupParent extends FrameLayout {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         Log.i(TAG, "dispatchTouchEvent: >>>>>>>>>>>>");
-        return super.dispatchTouchEvent(ev);
+        return true;
     }
 
     @Override
