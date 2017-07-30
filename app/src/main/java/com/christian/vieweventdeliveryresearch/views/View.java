@@ -24,6 +24,7 @@ import android.view.MotionEvent;
 
 public class View extends android.view.View {
     private static final String TAG = View.class.getSimpleName();
+
     public View(Context context) {
         super(context);
     }
@@ -42,13 +43,13 @@ public class View extends android.view.View {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.i(TAG, "dispatchTouchEvent: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        Log.i(TAG, "dispatchTouchEvent:" + ev.getAction() + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, "onTouchEvent: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        Log.i(TAG, "onTouchEvent:" + event.getAction() + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         return super.onTouchEvent(event);
     }
 }

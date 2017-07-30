@@ -28,6 +28,7 @@ import android.widget.FrameLayout;
 
 public class ViewGroupParent extends FrameLayout {
     private static final String TAG = ViewGroupParent.class.getSimpleName();
+
     public ViewGroupParent(@NonNull Context context) {
         super(context);
     }
@@ -46,19 +47,19 @@ public class ViewGroupParent extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.i(TAG, "dispatchTouchEvent: >>>>>>>>>>>>");
+        Log.i(TAG, "dispatchTouchEvent:" + ev.getAction() + ">>>>>>>>>>>>");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.i(TAG, "onInterceptTouchEvent: >>>>>>>>>>>>");
+        Log.i(TAG, "onInterceptTouchEvent:" + ev.getAction() + ">>>>>>>>>>>>");
         return super.onInterceptTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, "onTouchEvent: >>>>>>>>>>>>");
+        Log.i(TAG, "onTouchEvent:" + event.getAction() + ">>>>>>>>>>>>");
         return super.onTouchEvent(event);
     }
 }
